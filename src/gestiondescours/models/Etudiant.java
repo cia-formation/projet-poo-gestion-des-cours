@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package gestiondescours;
+package gestiondescours.models;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -69,7 +69,7 @@ public class Etudiant extends Utilisateur {
     }
     
     @Override
-    void afficherInfos(){
+    public void afficherInfos(){
         // System.out.println("Utilisateur: matricule = "+matricule +", nom = "+nom +", prenom = "+prenom + ", date naissance = "+dateDeNaissance);
         System.out.println("Etudiant: matricule = "+matricule +", nom = "+nom +", prenom = "+prenom +", nombreAnneesPostBac = "+nombreAnneesPostBac);
     }

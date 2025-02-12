@@ -4,6 +4,9 @@
  */
 package gestiondescours;
 
+import gestiondescours.models.Enseignant;
+import gestiondescours.models.Etudiant;
+import gestiondescours.models.Utilisateur;
 import java.util.Date;
 import utils.DateConverter;
 
@@ -17,41 +20,69 @@ public class GestionDesCours {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Utilisateur utilisateur = new Utilisateur("U0001", "TALLA", "Jean", DateConverter.toDate("12/01/2000"));
-        Enseignant enseignant = new Enseignant("EN001", "TOUBE", "Pierre", 5, DateConverter.toDate("24/12/1992"), DateConverter.toDate("12/01/2010"));
-        Etudiant e = new Etudiant("ET001", "KUMBA", "Cabrel", 1, DateConverter.toDate("24/12/2002"));
-       
         
-        Utilisateur[] tabUtilisateurs ={utilisateur, enseignant, e};
+        int choix;
+        do{
+            choix = MenuConsole.afficherMenuPrincipal();
         
-        for (int i=0; i<3; i++){
-                   
-            Utilisateur u = tabUtilisateurs[i];
-
-            u.afficherInfos();
-            
-            if( u instanceof Etudiant){
-                System.out.println("U est un etudiant");
-            }else if(u instanceof Enseignant){
-                System.out.println("U est un Enseignant");
-            }else if(u instanceof Utilisateur){
-                System.out.println("U est un Utilisateur");
+            Console.afficher("Choix: "+choix);
+            switch(choix){
+                case 1:
+                    gestionDesEtudiants();
+                    break;
+                case 2:
+                    Console.afficher("> Gestion: des enseignants");
+                    break;
+                case 3:
+                    Console.afficher("> Gestion: des niveaux");
+                    break;
+                case 4:
+                    Console.afficher("> Gestion: des matieres");
+                    break;
+                case 5:
+                    Console.afficher("> Gestion: des notes");
+                    break;
+                case 0:
+                    Console.afficher("Fermeture du programme");
+                    break;
+                default:
+                    Console.afficher("Erreur, choisissez une valeur entre 1 et 5 ou alors 0 pour quitter.");
+                    break;
             }
-        }
+                        
+        }while(choix!=0);
+    }
+    
+    static void gestionDesEtudiants(){
+        Console.afficher("> Gestion: des etudiants");
         
+        int choix;
+        do{
+            choix = MenuConsole.afficherMenuGestionDesEtudiants();
         
-        
-        /*
-        utilisateur = e;
-        
-        
-        
-        
-        utilisateur.afficherInfos();
-        enseignant.afficherInfos();
-        e.afficherInfos();
-*/
-        
+            Console.afficher("Choix: "+choix);
+            switch(choix){
+                case 1:
+                    Console.afficher("> Enregistrer un etudiant");
+                    break;
+                case 2:
+                    Console.afficher("> Mettre a jour un etudiant");
+                    break;
+                case 3:
+                    Console.afficher("> Afficher la liste des etudiants");
+                    break;
+                case 4:
+                    Console.afficher("> Supprimer un etudiants");
+                    break;
+                case 0:
+                    // retourner au menu principal
+                    break;
+                default:
+                    Console.afficher("Erreur, choisissez une valeur entre 1 et 4 ou alors 0 pour retourner au menu principal.");
+                    break;
+            }
+                        
+        }while(choix!=0);
     }
     
 }
