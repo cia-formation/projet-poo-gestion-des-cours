@@ -4,7 +4,9 @@
  */
 package gestiondescours;
 
+import java.util.Date;
 import java.util.Scanner;
+import utils.DateConverter;
 
 /**
  *
@@ -12,12 +14,27 @@ import java.util.Scanner;
  */
 public class Console {
     
-    static public void afficher(String msg){
+    static public void afficherln(String msg){
         System.out.println(msg);
+    }
+    
+    static public void afficher(String msg){
+        System.out.print(msg);
     }
     
     static public int lireEntier(){
         Scanner scan = new Scanner(System.in);
         return scan.nextInt();
+    }
+    
+    static public String lireChaineDeCaracteres(){
+        Scanner scan = new Scanner(System.in);
+        return scan.nextLine();
+    }
+    
+    static public Date lireDate(){
+        Scanner scan = new Scanner(System.in);
+        String dateString = scan.nextLine();
+        return DateConverter.toDate(dateString);
     }
 }
