@@ -24,8 +24,6 @@ public class EtudiantService {
         Date dateDeNaissance;
         int nombreAnneePostBac;
         
-        
-        
         Console.afficher("Saisir le matricule: ");
         matricule = Console.lireChaineDeCaracteres();
         
@@ -52,6 +50,45 @@ public class EtudiantService {
     }
     
     public void mettreAJourEtudiant(){
+        Console.afficherln("> Mise a jour d'un etudiant");
+        String matricule, nom, prenom;
+        Date dateDeNaissance;
+        int nombreAnneePostBac;
+        Etudiant etudaintAMetreAJour = null;
+        
+        Console.afficher("Saisir le matricule: ");
+        matricule = Console.lireChaineDeCaracteres();
+        
+        for(int i=0; i<liste.size(); i++){
+            Etudiant e = liste.get(i);
+            if(matricule.equals(e.getMatricule())){
+                etudaintAMetreAJour = e;
+                break;
+            }
+        }
+        
+        if(etudaintAMetreAJour==null){
+            Console.afficherln("Erreur: Aucun etudiant avec ce matricule");
+        }else{
+            Console.afficher("Saisir le nom: ");
+            nom = Console.lireChaineDeCaracteres();
+
+            Console.afficher("Saisir le prenom: ");
+            prenom = Console.lireChaineDeCaracteres();
+
+            Console.afficher("Saisir le nombre d'annee post bac: ");
+            nombreAnneePostBac = Console.lireEntier();
+
+            Console.afficher("Saisir la date de naissance: ");
+            dateDeNaissance = Console.lireDate();
+
+            etudaintAMetreAJour.setNom(nom);
+            etudaintAMetreAJour.setPrenom(prenom);
+            etudaintAMetreAJour.setNombreAnneesPostBac(nombreAnneePostBac);
+            etudaintAMetreAJour.setDateDeNaissance(dateDeNaissance);
+         
+            Console.afficherln("> Mise a jour effectee");
+        }
         
     }
     
@@ -75,6 +112,26 @@ public class EtudiantService {
     }
     
     public void supprimerEtudiant(){
+        Console.afficherln("> Suppression d'un etudiant");
+        String matricule;
+        Etudiant etudaintASupprimer = null;
+
+        Console.afficher("Saisir le matricule: ");
+        matricule = Console.lireChaineDeCaracteres();
         
+        for(int i=0; i<liste.size(); i++){
+            Etudiant e = liste.get(i);
+            if(matricule.equals(e.getMatricule())){
+                etudaintASupprimer = e;
+                break;
+            }
+        }
+        
+        if(etudaintASupprimer==null){
+            Console.afficherln("Erreur: Aucun etudiant avec ce matricule");
+        }else{
+            liste.remove(etudaintASupprimer);
+            Console.afficherln("Etudiant supprime avec succes");
+        }
     }
 }

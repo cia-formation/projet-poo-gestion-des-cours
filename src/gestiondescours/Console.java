@@ -19,7 +19,7 @@ public class Console {
     }
     
     static public void afficher(String msg){
-        System.out.print(msg);
+        System.out.print(msg);        
     }
     
     static public int lireEntier(){

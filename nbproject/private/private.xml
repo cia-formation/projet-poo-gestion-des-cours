@@ -3,14 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/9ieAir/NetBeansProjects/GestionDesCours/src/test/Lion.java</file>
-            <file>file:/Users/9ieAir/NetBeansProjects/GestionDesCours/src/test/Chien.java</file>
-            <file>file:/Users/9ieAir/NetBeansProjects/GestionDesCours/src/test/Animal.java</file>
-            <file>file:/Users/9ieAir/NetBeansProjects/GestionDesCours/src/gestiondescours/Etudiant.java</file>
-            <file>file:/Users/9ieAir/NetBeansProjects/GestionDesCours/src/test/Chat.java</file>
-            <file>file:/Users/9ieAir/NetBeansProjects/GestionDesCours/src/gestiondescours/Utilisateur.java</file>
+            <file>file:/Users/9ieAir/NetBeansProjects/GestionDesCours/src/gestiondescours/models/Enseignant.java</file>
+            <file>file:/Users/9ieAir/NetBeansProjects/GestionDesCours/src/gestiondescours/Console.java</file>
+            <file>file:/Users/9ieAir/NetBeansProjects/GestionDesCours/src/gestiondescours/models/Matiere.java</file>
+            <file>file:/Users/9ieAir/NetBeansProjects/GestionDesCours/src/gestiondescours/MenuConsole.java</file>
+            <file>file:/Users/9ieAir/NetBeansProjects/GestionDesCours/src/gestiondescours/models/Etudiant.java</file>
+            <file>file:/Users/9ieAir/NetBeansProjects/GestionDesCours/src/gestiondescours/models/Utilisateur.java</file>
+            <file>file:/Users/9ieAir/NetBeansProjects/GestionDesCours/src/utils/DateConverter.java</file>
             <file>file:/Users/9ieAir/NetBeansProjects/GestionDesCours/src/gestiondescours/GestionDesCours.java</file>
-            <file>file:/Users/9ieAir/NetBeansProjects/GestionDesCours/src/gestiondescours/Enseignant.java</file>
+            <file>file:/Users/9ieAir/NetBeansProjects/GestionDesCours/src/gestiondescours/models/Niveau.java</file>
+            <file>file:/Users/9ieAir/NetBeansProjects/GestionDesCours/src/gestiondescours/EtudiantService.java</file>
         </group>
     </open-files>
 </project-private>

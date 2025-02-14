@@ -70,13 +70,13 @@ public class GestionDesCours {
                     etudiantService.enregistrerEtudiant();
                     break;
                 case 2:
-                    Console.afficherln("> Mettre a jour un etudiant");
+                    etudiantService.mettreAJourEtudiant();
                     break;
                 case 3:
                     etudiantService.afficherListeEtudiants();
                     break;
                 case 4:
-                    Console.afficherln("> Supprimer un etudiant");
+                    etudiantService.supprimerEtudiant();
                     break;
                 case 0:
                     // retourner au menu principal
